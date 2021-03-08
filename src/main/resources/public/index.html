@@ -18,7 +18,7 @@
             .querySelector("#greetings")
             .append(message);
     };
-    console.log(BASE_URL);
+
     const fetchGreetings = () => {
         axios.get(`${BASE_URL}/greetings`)
             .then(response => {
