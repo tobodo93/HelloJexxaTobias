@@ -19,12 +19,19 @@ public class HelloWorld
     public static void main(String[] args)
     {
         JexxaMain jexxaMain = new JexxaMain("HelloWorld");
+
         jexxaMain.bind(JMXAdapter.class).to(jexxaMain.getBoundedContext())
                 .bind(RESTfulRPCAdapter.class).to(HelloWorld.class)
                 .start()
                 .waitForShutdown()
                 .stop();
-
+        JexxaMain jexxaMain1 = new JexxaMain("ByeWorld");
+        jexxaMain1.bind(JMXAdapter.class).to(jexxaMain1.getBoundedContext())
+                .bind(RESTfulRPCAdapter.class).to(ByeWorld.class)
+                .start()
+                .waitForShutdown()
+                .stop();
+     
 
     }
 
