@@ -14,7 +14,11 @@ public class HelloWorld
     {
         return "HelloWorld";
     }
-  
+
+    public String greetings2()
+    {
+        return "HelloMichael";
+    }
 
     public static void main(String[] args)
     {
@@ -25,12 +29,7 @@ public class HelloWorld
                 .start()
                 .waitForShutdown()
                 .stop();
-        JexxaMain jexxaMain1 = new JexxaMain("ByeWorld");
-        jexxaMain1.bind(JMXAdapter.class).to(jexxaMain1.getBoundedContext())
-                .bind(RESTfulRPCAdapter.class).to(ByeWorld.class)
-                .start()
-                .waitForShutdown()
-                .stop();
+
      
 
     }
